@@ -39,6 +39,14 @@ ul li {
     font-size: 1.3rem;
 }
 
+.side-content a, .logo {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: min-content min-content;
+    gap: 15px;
+    align-items: center;
+}
+
 .main-content {
     padding: 60px 10px 60px 15px;
     background-color: #eee8;
@@ -139,6 +147,11 @@ ul li {
     align-items: center;
 }
 
+.top-header button {
+    border: none;
+    background-color: transparent;
+}
+
 .search-bar {
     display: grid;
     grid-auto-flow: column;
@@ -152,6 +165,7 @@ ul li {
     gap: 25px;
     font-weight: bold;
     grid-template-columns: min-content min-content max-content;
+    align-items: center;
 }
 
 .bottom-header {
