@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
 }
 ul li {
     list-style-type: none;
@@ -49,18 +50,19 @@ button {
 }
 
 .main-content {
-    padding: 30px 10px 30px 15px;
+    padding: 60px 10px 60px 15px;
     background-color: #eee8;
     display: grid;
-    grid-template: 8fr 3fr / 1fr 1fr ;
+    grid-template: min-content min-content / min-content min-content ;
+    row-gap: 60px;
+    column-gap: 15px;
 }
 
 .projects {
     grid-row: 1 / 3 ;
     display: grid;
-    grid-template: repeat(3, min-content) / 1fr 1fr;
+    grid-template: repeat(3, 1fr) / 350px 350px;
     gap: 15px;
-    padding-right: 15px;
 }
 
 .projects > .cards {
@@ -72,14 +74,63 @@ button {
     padding: 25px 15px 20px 15px;
 }
 
-.cards p {
+.projects > .cards p {
     font-size: 14px;
     color: #0009;
 }
 
-.cards h2 {
+.projects > .cards h2 {
     font-size: 16px;
     margin-bottom: 5px;
+}
+
+.announcements, .trending {
+    border: 1px solid #0001;
+    border-radius: 5px;
+    box-shadow: 1px 1px 1px 1px #0003;
+    background-color: #fff;
+    padding: 10px 25px;
+}
+
+.announcements .cards {
+    border-bottom: 1px solid #0003;
+    padding: 20px 5px;
+}
+
+.announcements .cards:last-of-type {
+    border: none;
+}
+
+.announcements > .cards p, .trending > .cards p {
+    font-size: 14px;
+    color: #0009;
+}
+
+.announcements > .cards h2, .trending > .cards h2 {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.announcements {
+    display: grid;
+    grid-template: 1fr 1fr 1fr / 250px;
+}
+
+.trending {
+    display: grid;
+    grid-template: repeat(3, 1fr) / 250px;
+    align-content: start;
+    gap: 20px;
+}
+
+.trending .cards {
+    display: grid;
+    grid-template: min-content min-content / min-content max-content;
+    gap: 1px 15px;
+}
+
+.trending button {
+    grid-row: 1 / span 2;
 }
 
 @media screen and (max-width: 1000px) {
