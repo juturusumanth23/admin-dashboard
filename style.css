@@ -165,10 +165,6 @@ ul li {
     font-weight: bold;
 }
 
-.bottom-header >div button{
-    width: 50px;
-}
-
 .bottom-header p:first-of-type {
     font-size: 0.8rem;
 }
